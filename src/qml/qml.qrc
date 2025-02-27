@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>screens/HomeScreen.qml</file>
+        <file>screens/DiscoveryScreen.qml</file>
+        <file>screens/QuizScreen.qml</file>
+        <file>screens/ConversationScreen.qml</file>
+        <file>components/CustomButton.qml</file>
+        <file>components/TopBar.qml</file>
+        <file>components/QuestionCard.qml</file>
+    </qresource>
+</RCC>
