@@ -1,21 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <array name="qt_sources">
-        <item>https://download.qt.io/ministro/android/qt5/qt-5.14</item>
+        <item>https://download.qt.io/ministro/android/qt6/qt-6.5</item>
     </array>
 
     <array name="qt_libs">
-        <item>Qt5Core</item>
-        <item>Qt5Gui</item>
-        <item>Qt5QuickControls2</item>
-        <item>Qt5Quick</item>
-        <item>Qt5Widgets</item>
+        <item>QtCore</item>
+        <item>QtGui</item>
+        <item>QtQuickControls2</item>
+        <item>QtQml</item>
+        <item>QtQuick</item>
+        <item>QtAndroidExtras</item>
     </array>
 
     <array name="bundled_libs">
+        <item>OfficialApp</item>
     </array>
 
     <array name="load_local_libs">
+        <item>libOfficialApp.so</item>
     </array>
 
     <string name="ministro_not_found_msg">The Ministro service is not found. The application cannot start.</string>

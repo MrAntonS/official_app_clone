@@ -33,6 +33,9 @@ android {
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
+        
+        // Add support for multidex
+        multiDexEnabled true
     }
 
     compileOptions {
@@ -48,5 +51,34 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    
+    // For Qt 6 on Android - this ensures the Qt Java classes are found
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = [
+                'src',
+                '${QT_ANDROID_JAVA_SOURCE_DIR}',
+                '${QT_ANDROID_BUNDLED_JAR_DEPENDENCIES}'
+            ]
+            aidl.srcDirs = ['src', '${QT_ANDROID_JAVA_SOURCE_DIR}']
+            res.srcDirs = ['res']
+            resources.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    
+    // Handle packaging of Qt libraries
+    packagingOptions {
+        // Avoid duplicate file errors during packaging
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        // Don't strip Qt libraries
+        doNotStrip "**/*.so"
     }
 }
