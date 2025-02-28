@@ -1,5 +1,6 @@
 QT += quick core quickcontrols2
 
+TARGET = OfficialApp
 CONFIG += c++17
 
 SOURCES += \
