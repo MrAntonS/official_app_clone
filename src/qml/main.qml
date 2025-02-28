@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
-import QtQuick.Controls.Material
+import QtQuick.Controls.Material 2.15
 
 ApplicationWindow {
     id: window

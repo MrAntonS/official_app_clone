@@ -6,12 +6,12 @@
 #include <QDir>
 #include "appmodel.h"
 
-#ifdef Q_OS_ANDROID
-#include <QtAndroid>
-#endif
-
 int main(int argc, char *argv[])
 {
+    // Set debug environment variables
+    qputenv("QT_DEBUG_PLUGINS", "1");
+    qputenv("QML_IMPORT_TRACE", "1");
+
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
@@ -30,6 +30,10 @@ int main(int argc, char *argv[])
     QQuickStyle::setStyle("Material");
     
     QQmlApplicationEngine engine;
+    
+    // Add import paths to ensure QML modules are found
+    engine.addImportPath("qrc:/");
+    engine.addImportPath(":/");
     
     qDebug() << "Creating AppModel...";
     AppModel appModel;
@@ -53,6 +57,10 @@ int main(int argc, char *argv[])
     });
     
     const QUrl url(QStringLiteral("qrc:/main.qml"));
+    
+    // Print out the URL for debugging
+    qDebug() << "Loading QML from:" << url.toString();
+    
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl) {
@@ -67,6 +75,10 @@ int main(int argc, char *argv[])
     
     if (engine.rootObjects().isEmpty()) {
         qDebug() << "No root objects created - application failed to load QML";
+        qDebug() << "Engine errors:";
+        for (const QQmlError &error : engine.warnings()) {
+            qDebug() << "  " << error.toString();
+        }
         return -1;
     }
     
