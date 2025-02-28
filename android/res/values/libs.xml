@@ -5,12 +5,14 @@
     </array>
 
     <array name="qt_libs">
-        <item>QtCore</item>
-        <item>QtGui</item>
-        <item>QtQuickControls2</item>
-        <item>QtQml</item>
-        <item>QtQuick</item>
-        <item>QtAndroidExtras</item>
+        <item>Qt6Core</item>
+        <item>Qt6Gui</item>
+        <item>Qt6QuickControls2</item>
+        <item>Qt6Qml</item>
+        <item>Qt6Quick</item>
+        <item>Qt6QuickLayouts</item>
+        <item>Qt6QuickTemplates2</item>
+        <item>Qt6QmlModels</item>
     </array>
 
     <array name="bundled_libs">
@@ -19,6 +21,11 @@
 
     <array name="load_local_libs">
         <item>libOfficialApp.so</item>
+        <item>libQt6Core_${ANDROID_ABI}.so</item>
+        <item>libQt6Gui_${ANDROID_ABI}.so</item>
+        <item>libQt6QuickControls2_${ANDROID_ABI}.so</item>
+        <item>libQt6Qml_${ANDROID_ABI}.so</item>
+        <item>libQt6Quick_${ANDROID_ABI}.so</item>
     </array>
 
     <string name="ministro_not_found_msg">The Ministro service is not found. The application cannot start.</string>
