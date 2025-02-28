@@ -47,15 +47,28 @@ Rectangle {
             }
         }
         
-        // Title
-        Label {
+        // Title with logo
+        RowLayout {
             Layout.fillWidth: true
-            text: title
-            font.pixelSize: 20
-            font.bold: true
-            color: "white"
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
+            Layout.alignment: Qt.AlignHCenter
+            spacing: 8
+            
+            Label {
+                text: "❤️"
+                font.pixelSize: 22
+                color: "white"
+                visible: !showBackButton // Only show on main screen
+            }
+            
+            Label {
+                Layout.fillWidth: true
+                text: title
+                font.pixelSize: 20
+                font.bold: true
+                color: "white"
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
         }
         
         // Spacer to balance the back button

@@ -125,12 +125,23 @@ Item {
                         anchors.margins: 15
                         spacing: 10
                         
-                        Label {
+                        RowLayout {
                             Layout.fillWidth: true
-                            text: "Discovery"
-                            font.pixelSize: 18
-                            font.bold: true
-                            color: "white"
+                            spacing: 8
+                            
+                            Label {
+                                text: "🔍"
+                                font.pixelSize: 22
+                                color: "white"
+                            }
+                            
+                            Label {
+                                Layout.fillWidth: true
+                                text: "Discovery"
+                                font.pixelSize: 18
+                                font.bold: true
+                                color: "white"
+                            }
                         }
                         
                         Label {
@@ -160,12 +171,23 @@ Item {
                         anchors.margins: 15
                         spacing: 10
                         
-                        Label {
+                        RowLayout {
                             Layout.fillWidth: true
-                            text: "Quizzes"
-                            font.pixelSize: 18
-                            font.bold: true
-                            color: "white"
+                            spacing: 8
+                            
+                            Label {
+                                text: "❓"
+                                font.pixelSize: 22
+                                color: "white"
+                            }
+                            
+                            Label {
+                                Layout.fillWidth: true
+                                text: "Quizzes"
+                                font.pixelSize: 18
+                                font.bold: true
+                                color: "white"
+                            }
                         }
                         
                         Label {
@@ -195,12 +217,23 @@ Item {
                         anchors.margins: 15
                         spacing: 10
                         
-                        Label {
+                        RowLayout {
                             Layout.fillWidth: true
-                            text: "Conversation"
-                            font.pixelSize: 18
-                            font.bold: true
-                            color: "white"
+                            spacing: 8
+                            
+                            Label {
+                                text: "💬"
+                                font.pixelSize: 22
+                                color: "white"
+                            }
+                            
+                            Label {
+                                Layout.fillWidth: true
+                                text: "Conversation"
+                                font.pixelSize: 18
+                                font.bold: true
+                                color: "white"
+                            }
                         }
                         
                         Label {

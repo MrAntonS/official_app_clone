@@ -1,7 +1,8 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Controls.Material
 
 ApplicationWindow {
     id: window
@@ -9,6 +10,11 @@ ApplicationWindow {
     width: 360
     height: 640
     title: "Official App Clone"
+    
+    // Set Material theme
+    Material.theme: Material.Light
+    Material.accent: "#FF5A5F"
+    Material.primary: "#FF5A5F"
 
     // Define colors used throughout the app
     property color primaryColor: "#FF5A5F"
@@ -16,6 +22,11 @@ ApplicationWindow {
     property color backgroundColor: "#FFFFFF"
     property color textColor: "#484848"
     property color lightGrayColor: "#F7F7F7"
+    
+    // Set font sizes that scale appropriately
+    property int fontSizeMedium: Qt.application.font.pixelSize * 1.2
+    property int fontSizeLarge: Qt.application.font.pixelSize * 1.5
+    property int fontSizeXLarge: Qt.application.font.pixelSize * 2.0
 
     // Main stack view for navigation
     StackView {

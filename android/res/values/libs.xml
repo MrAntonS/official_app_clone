@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <array name="qt_sources">
+        <item>https://download.qt.io/ministro/android/qt5/qt-5.14</item>
+    </array>
+
+    <array name="qt_libs">
+        <item>Qt5Core</item>
+        <item>Qt5Gui</item>
+        <item>Qt5QuickControls2</item>
+        <item>Qt5Quick</item>
+        <item>Qt5Widgets</item>
+    </array>
+
+    <array name="bundled_libs">
+    </array>
+
+    <array name="load_local_libs">
+    </array>
+
+    <string name="ministro_not_found_msg">The Ministro service is not found. The application cannot start.</string>
+    <string name="ministro_needed_msg">This application requires Ministro service. Would you like to install it?</string>
+    <string name="fatal_error_msg">Your application encountered a fatal error and cannot continue.</string>
+    <string name="unsupported_android_version">This version of Android is not supported.</string>
+</resources>

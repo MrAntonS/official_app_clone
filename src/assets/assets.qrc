@@ -1,8 +1,4 @@
 <RCC>
     <qresource prefix="/assets">
-        <file>images/logo.png</file>
-        <file>images/discovery_icon.png</file>
-        <file>images/quiz_icon.png</file>
-        <file>images/conversation_icon.png</file>
     </qresource>
 </RCC>
